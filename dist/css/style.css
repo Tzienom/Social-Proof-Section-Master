@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+:root  {
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+}
+
+html  { font-size: 10px; }
+
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body  {
+    font: 400 1.5rem/1.2 "Spartan", sans-serif;
+    background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat;
+}
+
+.wrapper  {
+    max-width: 90em;
+    margin: 3rem auto;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    grid-template-areas: 
+        'header header aside'
+        'testimonials testimonials testimonials';
+}
+
+
+/* UTILITIES */
+
+.dark-magenta-color  { color: var(--very-dark-magenta); }
+.margin  { margin: 3rem 0; }
+
+p  { line-height: 2em; }
+
+
+/* HEADER */
+
+header  {
+    grid-area: header;
+    width: 35em;
+}
+
+header h1  {
+    font-size: 4.7rem;
+    margin-bottom: 1rem;
+}
+
+header p  {
+    font-weight: 500;
+    color: var(--dark-grayish-magenta);
+}
+
+
+
+/* ASIDE */
+
+aside  {
+    grid-area: aside;
+}
+
+.rating  {
+    background: var(--light-grayish-magenta);
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1em 2em;
+    border-radius: 7px;
+    font-weight: 700;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+.rating:nth-child(1)  {
+    position: relative;
+    left: -10em;
+}
+
+.rating:nth-child(2)  {
+    position: relative;
+    left: -5em;
+}
+
+
+
+
+/* TESTIMONIALS */
+
+.testimonials  {
+    grid-area: testimonials;
+    display: grid;
+    grid-template-columns: repeat(3,  1fr);
+    grid-gap: 2em;
+}
+
+.user-card  {
+    max-width: 30em;
+    background: var(--very-dark-magenta);
+    border-radius: 7px;
+    color: hsl(0, 0%, 100%);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: 
+        'card-image user-detail'
+        'testimony testimony';
+    align-items: center;
+    padding: 2em;
+}
+
+.user-card:nth-child(2)  {
+    position: relative;
+    top: 1em;
+}
+
+.user-card:nth-child(3)  {
+    position: relative;
+    top: 2em;
+}
+
+
+.card-image  {
+    grid-area: card-image;
+}
+
+.user-detail  {
+    grid-area: user-detail;
+    margin-left: 1.5rem;
+}
+
+.user-detail  h2  { font-size: 1.7rem; }
+
+
+.testimony  {   
+    grid-area: testimony;
+    margin-top: 2rem
+}
+
+.user-card .card-image img {
+    border-radius: 50%;
+    width: 4em;
+}
+
+.user-detail p  { color: var(--soft-pink); }

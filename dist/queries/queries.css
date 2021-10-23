@@ -1,0 +1,41 @@
+@media(max-width: 958px)  {
+
+    .wrapper  {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'header'
+            'aside'
+            'testimonials';
+        max-width: 70em;
+    }
+
+    .rating  {
+        grid-template-columns: 1fr;
+        padding: 1em;
+    }
+
+    .rating:nth-child(2) { left: 0; }
+    .rating:nth-child(1) { left: 0; }
+
+    header  { text-align: center; }
+
+    header,
+    aside,
+    .testimonials  {
+        width: 100%;
+    }
+
+    .testimonials  {
+        grid-template-columns: 1fr;
+    }
+
+    .user-card  { margin: auto; }
+    
+}
+
+
+@media(max-width: 303px)  {
+
+    html { font-size: 5px; }
+    h1  { font-size: 1rem; }
+}
